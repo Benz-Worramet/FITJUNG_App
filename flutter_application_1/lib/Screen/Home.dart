@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screen/login.dart';
 import 'package:flutter_application_1/Screen/profile.dart';
 import 'package:flutter_application_1/Screen/signup.dart';
+import 'package:flutter_application_1/Screen/Exercise.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

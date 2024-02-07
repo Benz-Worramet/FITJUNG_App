@@ -1,18 +1,32 @@
+import 'dart:io';
+import 'dart:typed_data';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/auth.dart';
 import 'package:flutter_application_1/controller/read.dart';
 import 'package:flutter_application_1/controller/update.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:flutter_application_1/controller/update.dart';
 
 class ProfileScreen extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('Profile'),
+          // เพิ่มปุ่มกลับในแถบแอปบาร์
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              // ให้ Navigator ทำงานเพื่อกลับไปยังหน้าก่อนหน้า
+              Navigator.pop(context);
+            },
+          ),
         ),
         body: Center(
           child: BmiCalculatorWidget(),
@@ -34,7 +48,16 @@ class _BmiCalculatorWidgetState extends State<BmiCalculatorWidget> {
   final formKey = GlobalKey<FormState>();
   double weightInput = 0, heightInput = 0;
   String nameInput = '';
+  String profileInput = '';
   final Future<FirebaseApp> firebase = Firebase.initializeApp();
+
+  Uint8List? image;
+  void selectImage() async {
+    Uint8List img = await UpdateProfile().pickImage(ImageSource.gallery);
+    setState(() {
+      image = img;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +71,28 @@ class _BmiCalculatorWidgetState extends State<BmiCalculatorWidget> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Stack(
+                  children: [
+                    image != null
+                        ? CircleAvatar(
+                            radius: 64,
+                            backgroundImage: MemoryImage(image!),
+                          )
+                        : const CircleAvatar(
+                            radius: 64,
+                            backgroundImage: NetworkImage(
+                                'https://t4.ftcdn.net/jpg/04/83/90/95/360_F_483909569_OI4LKNeFgHwvvVju60fejLd9gj43dIcd.jpg'),
+                          ),
+                    Positioned(
+                      child: IconButton(
+                        onPressed: selectImage,
+                        icon: const Icon(Icons.add_a_photo),
+                      ),
+                      bottom: -10,
+                      left: 80,
+                    )
+                  ],
+                ),
                 TextFormField(
                   controller: nameController,
                   keyboardType: TextInputType.name,
@@ -93,6 +138,7 @@ class _BmiCalculatorWidgetState extends State<BmiCalculatorWidget> {
                     await UpdateUser().updateWeight(tempUid, weightInput);
                     await UpdateUser().updateHeight(tempUid, heightInput);
                     await UpdateUser().updateName(tempUid, nameInput);
+                    await UpdateUser().updateProfile(tempUid, profileInput);
                     formKey.currentState!.reset();
                   },
                   child: Text('Calculate BMI'),
