@@ -122,7 +122,7 @@ class WelcomeScreen extends StatelessWidget {
                 auth.signOut().then((value) {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
-                    return LooginScreen();
+                    return LoginScreen();
                   }));
                 });
               },

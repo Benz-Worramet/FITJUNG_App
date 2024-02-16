@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                 label: Text("Login", style: TextStyle(fontSize: 20)),
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return LooginScreen();
+                    return LoginScreen();
                   }));
                 },
               ),
