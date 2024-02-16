@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
+import 'package:flutter_application_1/Screen/legposture.dart';
 import 'package:flutter_application_1/controller/auth.dart';
 import 'package:flutter_application_1/controller/read.dart';
 import 'package:flutter_application_1/controller/update.dart';
@@ -13,18 +15,43 @@ class LegScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('ขา'),
-          // เพิ่มปุ่มกลับในแถบแอปบาร์
+          title: Text('แขน'),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
-              // ให้ Navigator ทำงานเพื่อกลับไปยังหน้าก่อนหน้า
               Navigator.pop(context);
             },
           ),
         ),
-        // ต่อไปนี้คือเนื้อหาหน้าจอ ExerciseScreen
-        // ...
+        body: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Center(
+            child: Column(
+              children: [
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.red, // สีพื้นหลัง
+                      minimumSize: Size(1500, 80), // ขนาดปุ่ม
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0), // มุมโค้งมน
+                      ),
+                    ),
+                    child: Text("ท่า1", style: TextStyle(fontSize: 20, color: Colors.black)),
+
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LegPosture()),
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

@@ -12,6 +12,7 @@ import 'package:flutter_application_1/Screen/shoulder.dart';
 
 class ExerciseScreen extends StatelessWidget {
   final auth = FirebaseAuth.instance;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,8 +32,8 @@ class ExerciseScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return LegScreen();
-                    }));
+                          return LegScreen();
+                        }));
                   },
                 ),
               ),
@@ -44,8 +45,8 @@ class ExerciseScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return ArmScreen();
-                    }));
+                          return ArmScreen();
+                        }));
                   },
                 ),
               ),
@@ -57,8 +58,8 @@ class ExerciseScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return breastScreen();
-                    }));
+                          return BreastScreen();
+                        }));
                   },
                 ),
               ),
@@ -70,8 +71,8 @@ class ExerciseScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return shoulderScreen();
-                    }));
+                          return ShoulderScreen();
+                        }));
                   },
                 ),
               ),
@@ -82,3 +83,4 @@ class ExerciseScreen extends StatelessWidget {
     );
   }
 }
+
