@@ -15,7 +15,7 @@ class LegScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('แขน'),
+          title: Text('ขา'),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -38,8 +38,8 @@ class LegScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10.0), // มุมโค้งมน
                       ),
                     ),
-                    child: Text("ท่า1", style: TextStyle(fontSize: 20, color: Colors.black)),
-
+                    child: Text("ท่า1",
+                        style: TextStyle(fontSize: 20, color: Colors.black)),
                     onPressed: () {
                       Navigator.push(
                         context,
