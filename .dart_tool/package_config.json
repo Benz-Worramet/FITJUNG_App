@@ -44,6 +44,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "chewie",
+      "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/chewie-1.7.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "cli_util",
       "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/cli_util-0.4.1",
       "packageUri": "lib/",
@@ -110,10 +116,22 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "dbus",
+      "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/dbus-0.7.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "ffi",
+      "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "file_selector_linux",
@@ -362,6 +380,24 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_info_plus",
+      "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus-5.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "package_info_plus_platform_interface",
+      "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus_platform_interface-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.8.3",
       "packageUri": "lib/",
@@ -384,6 +420,12 @@
       "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/pointycastle-3.7.3",
       "packageUri": "lib/",
       "languageVersion": "2.14"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "rxdart",
@@ -494,8 +536,26 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "wakelock_plus",
+      "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/wakelock_plus-1.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "wakelock_plus_platform_interface",
+      "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/wakelock_plus_platform_interface-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "web",
       "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "win32",
+      "rootUri": "file:///C:/Users/benzgyza/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.2.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -518,7 +578,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-02-18T17:51:59.343731Z",
+  "generated": "2024-02-26T17:28:00.980546Z",
   "generator": "pub",
   "generatorVersion": "3.2.1"
 }

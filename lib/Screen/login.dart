@@ -100,6 +100,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                                 Expanded(
                                   child: TextFormField(
+                                    validator: MultiValidator([
+                                      RequiredValidator(
+                                          errorText: "Please enter your email"),
+                                      EmailValidator(
+                                          errorText:
+                                              "please enter an email address")
+                                    ]),
                                     controller: emailcontroller,
                                     keyboardType: TextInputType.emailAddress,
                                     style: TextStyle(
@@ -141,6 +148,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                                 Expanded(
                                   child: TextFormField(
+                                    validator: RequiredValidator(
+                                        errorText:
+                                            "Please enter your Password"),
                                     controller: passwordcontroller,
                                     obscureText: true,
                                     keyboardType: TextInputType.emailAddress,
