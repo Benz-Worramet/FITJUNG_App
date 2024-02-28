@@ -162,7 +162,6 @@ import 'package:flutter_application_1/Screen/infoposture.dart';
 
 class ArmScreen extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -183,40 +182,55 @@ class ArmScreen extends StatelessWidget {
               children: [
                 SizedBox(
                   width: double.infinity,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.red, // สีพื้นหลัง
-                      minimumSize: Size(1500, 80), // ขนาดปุ่ม
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0), // มุมโค้งมน
-                      ),
-                    ),
-                    child: Text("ท่า 1",
-                        style: TextStyle(fontSize: 20, color: Colors.black)),
-                    onPressed: () {
-                      _navigateToInfoPosture(context, 'assets/video/test.mp4');
-                    },
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      top: 10.0), // Set the desired spacing here
-                  child: SizedBox(
-                    width: double.infinity,
+                  child: Material(
+                    elevation: 5,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.red, // สีพื้นหลัง
-                        minimumSize: Size(1500, 80), // ขนาดปุ่ม
+                        primary: Colors.red,
+                        minimumSize: Size(1500, 80),
                         shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(10.0), // มุมโค้งมน
+                          borderRadius: BorderRadius.circular(5.0),
                         ),
                       ),
-                      child: Text("ท่า 2",
-                          style: TextStyle(fontSize: 20, color: Colors.black)),
+                      child: Text(
+                        "Dumbbell Biceps Curl",
+                        style: TextStyle(fontSize: 20, color: Colors.black),
+                      ),
                       onPressed: () {
                         _navigateToInfoPosture(
-                            context, 'assets/video/Dumbbell_hammer_Curl.mp4');
+                          context,
+                          'assets/video/Dumbbell_Biceps_Curl.mp4',
+                          'ท่าเล่นแขน ดัมเบล Dumbbell Bicep Curl ที่ช่วยเสริมส่วนกล้ามหน้าแขน เก็บศอกให้ชิดข้างลำตัว ไม่แกว่งเวลาผ่อนและออกแรง จะทำให้โดนกล้ามเนื้อหน้าแขนมากขึ้น',
+                        );
+                      },
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: Material(
+                    elevation: 5,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.red,
+                        minimumSize: Size(1500, 80),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
+                      child: Text(
+                        "Dumbbell Hammer Curl",
+                        style: TextStyle(fontSize: 20, color: Colors.black),
+                      ),
+                      onPressed: () {
+                        _navigateToInfoPosture(
+                          context,
+                          'assets/video/Dumbbell_hammer_Curl.mp4',
+                          'จัดตำแหน่งดัมเบลทั้งสองไว้ข้างตัว หันฝ่ามือทั้งสองข้างเข้าด้านใน แขนทั้งสองข้างอยู่ในลักษณะตรงจัดข้อศอกให้อยู่ด้านข้างลำตัว ยกดัมเบลด้านหนึ่งจนกระทั่งปลายแขนเป็นแนวตั้ง และนิ้วหัวแม่มืออยู่หน้าไหล่ และลดระดับไปที่ตำแหน่งเดิม และทำซ้ำ ',
+                        );
                       },
                     ),
                   ),
@@ -229,11 +243,13 @@ class ArmScreen extends StatelessWidget {
     );
   }
 
-  void _navigateToInfoPosture(BuildContext context, String videoPath) {
+  void _navigateToInfoPosture(
+      BuildContext context, String videoPath, String detailText) {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => InfoPosture(videoPath: videoPath),
+        builder: (context) =>
+            InfoPosture(videoPath: videoPath, detailText: detailText),
       ),
     );
   }

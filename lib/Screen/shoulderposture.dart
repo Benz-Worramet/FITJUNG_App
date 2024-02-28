@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class ShoulderPosture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,9 +14,7 @@ class ShoulderPosture extends StatelessWidget {
           ),
         ),
         body: GestureDetector(
-          onTap: () {
-            // ฟังก์ชันที่จะทำงานเมื่อคลิก
-          },
+          onTap: () {},
           child: Container(
             height: 200,
             width: 300,

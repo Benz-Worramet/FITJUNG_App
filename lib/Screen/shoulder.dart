@@ -38,12 +38,12 @@ class ShoulderScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10.0), // มุมโค้งมน
                       ),
                     ),
-                    child: Text("ท่า1", style: TextStyle(fontSize: 20, color: Colors.black)),
-
+                    child: Text("ท่า1",
+                        style: TextStyle(fontSize: 20, color: Colors.black)),
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ShoulderPosture()),
+                        MaterialPageRoute(builder: (context) => ArmPosture()),
                       );
                     },
                   ),

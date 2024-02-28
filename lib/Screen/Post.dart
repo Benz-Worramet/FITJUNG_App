@@ -13,18 +13,14 @@ class PostScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Post'),
-          // เพิ่มปุ่มกลับในแถบแอปบาร์
+          title: Text('Statistic'),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
-              // ให้ Navigator ทำงานเพื่อกลับไปยังหน้าก่อนหน้า
               Navigator.pop(context);
             },
           ),
         ),
-        // ต่อไปนี้คือเนื้อหาหน้าจอ ExerciseScreen
-        // ...
       ),
     );
   }

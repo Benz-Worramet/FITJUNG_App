@@ -102,8 +102,11 @@ import 'package:video_player/video_player.dart';
 
 class InfoPosture extends StatefulWidget {
   final String videoPath;
+  final String detailText;
 
-  const InfoPosture({Key? key, required this.videoPath}) : super(key: key);
+  const InfoPosture(
+      {Key? key, required this.videoPath, required this.detailText})
+      : super(key: key);
 
   @override
   _InfoPostureState createState() => _InfoPostureState();
@@ -142,10 +145,10 @@ class _InfoPostureState extends State<InfoPosture> {
     double clipHeight = screenHeight / 4;
 
     return MaterialApp(
-      title: 'Video Demo',
+      title: 'Video',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('ท่า 1'),
+          title: Text('Exercise'),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -162,6 +165,9 @@ class _InfoPostureState extends State<InfoPosture> {
                 controller: _chewieController,
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+            ),
             Container(
               alignment: Alignment.center,
               child: FloatingActionButton(
@@ -177,8 +183,11 @@ class _InfoPostureState extends State<InfoPosture> {
                 ),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+            ),
             Text(
-              "รายละเอียดท่า", // เปลี่ยนข้อความที่ต้องการแสดง
+              widget.detailText, // ใส่ข้อความที่ถูกส่งมาจากหน้า ArmScreen
               style: TextStyle(
                 fontSize: 16.0,
                 color: Colors.black,

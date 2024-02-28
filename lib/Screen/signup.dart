@@ -295,7 +295,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                                 Container(
                                   width:
-                                      MediaQuery.of(context).size.width * 0.30,
+                                      MediaQuery.of(context).size.width * 0.35,
                                   height: 5,
                                   color: Colors.white,
                                 )

@@ -19,11 +19,9 @@ class ProfileScreen extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Profile'),
-          // เพิ่มปุ่มกลับในแถบแอปบาร์
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
-              // ให้ Navigator ทำงานเพื่อกลับไปยังหน้าก่อนหน้า
               Navigator.pop(context);
             },
           ),

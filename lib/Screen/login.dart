@@ -305,13 +305,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              // Clear and descriptive labeling
                               Text('Don\'t have an account yet? ',
                                   style: TextStyle(color: Colors.white60)),
-                              // Use GestureDetector for more nuanced control and feedback
                               GestureDetector(
                                 onTap: () {
-                                  // Push the SignupScreen using Navigator.push
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(

@@ -86,7 +86,7 @@ class WelcomeScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton.icon(
                     icon: Icon(Icons.login),
-                    label: Text("Post", style: TextStyle(fontSize: 20)),
+                    label: Text("Statistic", style: TextStyle(fontSize: 20)),
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {

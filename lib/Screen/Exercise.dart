@@ -32,8 +32,8 @@ class ExerciseScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                          return LegScreen();
-                        }));
+                      return LegScreen();
+                    }));
                   },
                 ),
               ),
@@ -45,8 +45,8 @@ class ExerciseScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                          return ArmScreen();
-                        }));
+                      return ArmScreen();
+                    }));
                   },
                 ),
               ),
@@ -58,8 +58,8 @@ class ExerciseScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                          return BreastScreen();
-                        }));
+                      return BreastScreen();
+                    }));
                   },
                 ),
               ),
@@ -71,8 +71,8 @@ class ExerciseScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                          return ShoulderScreen();
-                        }));
+                      return ShoulderScreen();
+                    }));
                   },
                 ),
               ),
@@ -83,4 +83,3 @@ class ExerciseScreen extends StatelessWidget {
     );
   }
 }
-
